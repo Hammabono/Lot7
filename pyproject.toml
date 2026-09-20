@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loto7"
+version = "1.0.0"
+description = "ロト7 の過去当せん番号を分析し、買い目候補を生成・検証するツール"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+loto7 = "loto7.cli:main"
+
+[tool.setuptools]
+packages = ["loto7"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
